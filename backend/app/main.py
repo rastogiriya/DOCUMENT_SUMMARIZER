@@ -67,7 +67,7 @@ async def summarize_document(file: FileName):
                 for page in reader.pages:
                     content += page.extract_text()
         
-        summary = summarizer(content, max_length=150, min_length=40, do_sample=False)
+        summary = summarizer(content, max_length=500, min_length=50, do_sample=False)
         return JSONResponse(content={"summary": summary[0]['summary_text']})
     except Exception as e:
         logger.error(f"Error summarizing document: {e}")

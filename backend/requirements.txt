@@ -2,3 +2,6 @@ fastapi
 uvicorn
 transformers
 torch
+fastapi-cors
+PyPDF2
+pydantic
